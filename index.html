@@ -24,7 +24,6 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center"> <a data-fancybox data-src="#hidden-content" href="javascript:;">Open Lightbox</a> </div>
-            <div class="col-lg-12 text-center"><a href="no-ip-front-end-test.zip"><i class="fa fa-file-archive-o" aria-hidden="true"></i> Download the completed files.</a></div>
         </div>
         <!-- /.row -->
     </div>
@@ -81,19 +80,9 @@
                 src: '#hidden-content'
                 , type: 'inline'
                 , opts: {
-                    onComplete: function () {
-                        $("#fancybox-wrap").css({
-                            'top': '30px'
-                            , 'bottom': 'auto'
-                        });
-                    }
+                    onComplete: function () {}
                 }
             });
-            $.fancybox({
-                'speedIn': 600
-                , 'speedOut': 200
-                , 'topRatio': 0
-            , });
         });
     </script>
 </body>
