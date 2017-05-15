@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Front-End Test</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="css/common.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+</head>
+
+<body>
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center"> <a data-fancybox data-src="#hidden-content" href="javascript:;">Open Lightbox</a> </div>
+            <div class="col-lg-12 text-center"><a href="no-ip-front-end-test.zip"><i class="fa fa-file-archive-o" aria-hidden="true"></i> Download the completed files.</a></div>
+        </div>
+        <!-- /.row -->
+    </div>
+    <div class="container light-box" id="hidden-content" style="display: none;">
+        <div class="row logo-row">
+            <a href="https://www.noip.com/" target="_blank" class="navbar-nav mr-auto no-ip-logo"></a>
+            <div class="mb-2 managed-dns-services">Managed <span class="ip-blue ml-1 mr-1">DNS</span> Services</div>
+        </div>
+        <div class="row popup-body">
+            <div class="col-lg-6 text-center">
+                <h2>Get Upgraded Dynamic DNS From the Start</h2>
+                <h4>A FREE account requires you to confirm your hostname every 30 days.</h4>
+                <h3><a href="#">Don’t want to be bothered?</a></h3> <a href="#" class=" btn blue ">Upgrade to Enhanced</a> </div>
+            <div class="col-lg-6 text-center"> <a data-src="#close" class="close hidden-md-down text-right" href="javascript:;"><i class="fa fa-times" aria-hidden="true"></i></a>
+                <div class="cta">Create my <strong>FREE account</strong></div>
+                <form class="form-inline" method="GET" action="https://www.noip.com/sign-up">
+                    <input class="col-12" type="text" id="input" placeholder="Email">
+                    <input class="col-12" type="text" id="username" placeholder="Username">
+                    <input class="col-12" type="text" id="password" placeholder="Password">
+                    <input class="col-7 host-name nomarg" id="hostname" name="hostname" type="text" value="" placeholder="Hostname">
+                    <div class="btn-group col-5 pl-0 mt-0 pr-0">
+                        <button type="button" class="btn  btn-secondary drop-field ">.hopto.org</button>
+                        <button type="button" class="btn  btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-chevron-down" aria-hidden="true"></i> </button>
+                        <div class="dropdown-menu"> <a class="dropdown-item" href="#">.hopto.org</a> <a class="dropdown-item" href="#">.zapto.org</a> <a class="dropdown-item" href="#">.sytes.net</a> <a class="dropdown-item" href="#">.ddns.net</a> </div>
+                    </div>
+                    <button href="#" class="btn green">Create My FREE account</button>
+                    <div class="text-center col-12 email-box-parent pl-0">
+                        <div class="email-box">
+                            <input type="checkbox" value="None" id="email-box" name="check" checked />
+                            <label for="email-box"></label>
+                        </div> Send me newsletters &amp; special offers</div>
+                </form>
+            </div>
+        </div>
+        <div class="row popup-footer">
+            <div class="col-lg-8 col-sm-12 pull-left pl-0">By submitting this form I agree to the <strong>terms of service</strong> and that I will only create one FREE account.</div>
+            <div class=" col-lg-4 col-sm-12 pr-0">Already have an account? <a href="#" class="sign-in">Sign In</a></div>
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+    <!-- Scripts -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $('.close').click(function () {
+                $.fancybox.close();
+            });
+            $.fancybox.open({
+                src: '#hidden-content'
+                , type: 'inline'
+                , opts: {
+                    onComplete: function () {
+                        $("#fancybox-wrap").css({
+                            'top': '30px'
+                            , 'bottom': 'auto'
+                        });
+                    }
+                }
+            });
+            $.fancybox({
+                'speedIn': 600
+                , 'speedOut': 200
+                , 'topRatio': 0
+            , });
+        });
+    </script>
+</body>
+
+</html>
